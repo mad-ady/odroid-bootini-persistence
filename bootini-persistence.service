@@ -1,0 +1,10 @@
+[Unit]
+Description=bootini persistence script - preserve user settings after boot.ini is updated
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=/usr/local/bin/bootini-persistence.pl
+
+[Install]
+WantedBy=multi-user.target
